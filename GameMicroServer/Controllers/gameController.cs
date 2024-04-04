@@ -7,7 +7,7 @@ namespace Micro
 {
     public class gameController : Controller
     {
-        [HttpGet("tetris")]
+        [HttpGet("games")]
         public IActionResult GetTetris()
         {
             // Specify the path to the tetris.js file
