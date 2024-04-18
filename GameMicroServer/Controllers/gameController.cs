@@ -10,7 +10,7 @@ namespace Micro
     [Route("[controller]")]
     public class gameController : Controller
     {
-        [HttpGet("games/{id}")]
+        [HttpGet("Games/Play/{id}")]
         public IActionResult GetGame(int id)
         {
             switch (id)

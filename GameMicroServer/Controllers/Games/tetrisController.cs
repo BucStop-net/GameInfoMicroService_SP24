@@ -7,7 +7,7 @@ namespace GameMicroServer.Controllers.Games
     [Route("[controller]")]
     public class TetrisController : Controller
     {
-        [HttpGet("tetris")]
+        [HttpGet("Games/Play/2")]
         public IActionResult GetTetris()
         {
             string relativePath = Path.Combine("GamesJs", "tetris.js");
