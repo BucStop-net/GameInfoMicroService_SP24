@@ -3,6 +3,8 @@ using System.IO;
 
 namespace GameMicroServer.Controllers.Games
 {
+    [ApiController]
+    [Route("[controller]")]
     public class TetrisController : Controller
     {
         [HttpGet("tetris")]

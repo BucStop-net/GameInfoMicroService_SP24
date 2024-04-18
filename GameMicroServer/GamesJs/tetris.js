@@ -171,12 +171,14 @@ function showGameOver() {
     //calling send score function at end of game 
     console.log("game is over with score =" + score)
     var finalScore = score
-    sendScore(finalScore)
+    // sendScore(finalScore)
 
 }
 
-// function to send score to the server via API 
+// function to send score to the server via API
 // using fetch to send a POST request to the server
+// down for nopw until we get the api figured out 
+/*
 function sendScore(score) {
     fetch('/Games/SaveScore', {
         method: 'POST',
@@ -213,7 +215,7 @@ function saveScore(score) {
         alert('Invalid name. Please enter exactly 3 letters.');
     }
 }
-
+*/ 
 
 
 // Updated drawLeaderboard function
