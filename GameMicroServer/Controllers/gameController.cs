@@ -7,25 +7,18 @@ namespace Micro
 {
     public class gameController : Controller
     {
-        [HttpGet("games")]
-        public IActionResult GetTetris()
+        [HttpGet("games/{id}")]
+        public IActionResult GetGame(int id)
         {
-            // Specify the path to the tetris.js file
-            string relativePath = Path.Combine("Games", "tetris.js");
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), relativePath);
-            Console.WriteLine(filePath);
-            // Check if the file exists
-            if (!System.IO.File.Exists(filePath))
+            switch (id)
             {
-                Console.WriteLine("File not found" + filePath);
-                return NotFound();
+                case 1:
+                    return NotFound();
+                case 2:
+                    return RedirectToAction("GetTetris", "Tetris");
+                default:
+                    return NotFound();
             }
-
-            // Read the content of the file
-            string fileContents = System.IO.File.ReadAllText(filePath);
-
-            // Return the content of the file as a string
-            return Content(fileContents, "application/javascript");
         }
     }
 }
