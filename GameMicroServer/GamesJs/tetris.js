@@ -177,7 +177,7 @@ function showGameOver() {
 
 // function to send score to the server via API
 // using fetch to send a POST request to the server
-// down for nopw until we get the api figured out 
+// down for nopw until we get the api figured out
 /*
 function sendScore(score) {
     fetch('/Games/SaveScore', {
@@ -215,7 +215,6 @@ function saveScore(score) {
         alert('Invalid name. Please enter exactly 3 letters.');
     }
 }
-*/ 
 
 
 // Updated drawLeaderboard function
@@ -245,6 +244,7 @@ function checkForHighScore(score) {
     }
 }
 
+*/
 
 // draws the score while the game is playing
 function drawScore() {
@@ -376,7 +376,7 @@ function loop() {
     }
 
     // draw the score at the top
-    drawScore();
+    // drawScore();
 }
 
 // listen to keyboard events to move the active tetromino
